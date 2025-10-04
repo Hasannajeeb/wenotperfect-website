@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Not Perfect - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* Animated background pattern */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.02) 10px,
+                rgba(255, 255, 255, 0.02) 20px
+            );
+            animation: slide 20s linear infinite;
+        }
+        
+        @keyframes slide {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            animation: fadeInDown 1s ease-out;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #cccccc;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .coming-soon {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+            animation: fadeIn 1s ease-out 0.6s both;
+            font-weight: 300;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            color: #aaaaaa;
+            animation: fadeIn 1s ease-out 0.9s both;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 1.2s both;
+            border: 2px solid #ffffff;
+            text-transform: uppercase;
+        }
+        
+        .download-btn:hover {
+            background: transparent;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+        
+        .social-links {
+            margin-top: 60px;
+            animation: fadeIn 1s ease-out 1.5s both;
+        }
+        
+        .social-links p {
+            color: #888888;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        .email {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        
+        .email:hover {
+            border-bottom-color: #ffffff;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .coming-soon {
+                font-size: 1.5rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+            }
+            
+            .download-btn {
+                padding: 15px 35px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">We Not Perfect</h1>
+        <p class="tagline">Embracing Authenticity, Celebrating Progress</p>
+        <h2 class="coming-soon">Coming Soon</h2>
+        <p class="description">
+            We're building something real. Something honest. Something imperfectly perfect. 
+            Stay tuned as we prepare to launch our journey of authenticity and growth.
+        </p>
+        <a href="https://drive.google.com/file/d/1S71b2EEKL3w_0Mv3ZDFMI0kjNE8_IXkB/view?usp=drive_link" class="download-btn" target="_blank">Download Now</a>
+        
+        <div class="social-links">
+            <p>GET IN TOUCH</p>
+            <a href="mailto:info@wenotperfect.com" class="email">info@wenotperfect.com</a>
+        </div>
+    </div>
+</body>
+</html>
